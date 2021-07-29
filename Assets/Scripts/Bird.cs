@@ -14,7 +14,10 @@ public class Bird : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.y > 10)
+        if (transform.position.y > 10 ||
+            transform.position.y < -10 ||
+            transform.position.x > 10 ||
+            transform.position.x < -10)
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(currentSceneName);
