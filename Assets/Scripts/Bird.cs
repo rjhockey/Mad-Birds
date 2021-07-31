@@ -28,8 +28,8 @@ public class Bird : MonoBehaviour
 
         if (transform.position.y > 10 ||
             transform.position.y < -10 ||
-            transform.position.x > 10 ||
-            transform.position.x < -10 ||
+            transform.position.x > 15 ||
+            transform.position.x < -15 ||
             _timeSittingAround > 3)
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
@@ -57,7 +57,7 @@ public class Bird : MonoBehaviour
 
     }
 
-private void OnMouseDrag()
+    private void OnMouseDrag()
     {
         Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(newPosition.x, newPosition.y);
